@@ -1,0 +1,161 @@
+  body {
+            box-sizing: border-box;
+        }
+
+        /* Green color scheme */
+        .bg-primary-custom {
+            background: linear-gradient(135deg, #059669, #0891b2);
+        }
+        
+        .text-primary-custom {
+            color: #059669;
+        }
+
+        /* Simple animations */
+        .card:hover {
+            transform: translateY(-2px);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            transition: 0.2s;
+        }
+
+        /* Hide pages by default */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Timer display */
+        .timer {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #059669;
+        }
+
+        /* CSS for bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Apply animation to the button */
+#get-started {
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: bounce 2s infinite; /* Bounce effect */
+}
+
+/* Optional: hover effect */
+#get-started:hover {
+  transform: scale(1.05);
+}
+
+
+        /* Simple flashcard */
+        .flashcard {
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid #059669;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #059669, #0891b2);
+            color: white;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .flashcard.flipped {
+            background: linear-gradient(45deg, #0891b2, #7c2d12);
+        }
+
+        /* Error messages */
+        .error {
+            color: #dc2626;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .success {
+            color: #059669;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        /* CSS Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .timer {
+                font-size: 2rem;
+            }
+            
+            .btn-lg {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .timer {
+                font-size: 1.5rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    /* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+}
+
+body.dark-mode .table {
+    color: #f1f1f1;
+}
+
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #2a2a2a;
+}
